@@ -1,0 +1,7 @@
+# IDE
+.idea/
+
+# Infrastruktur-Runtimes
+infrastructure/.terraform/
+
+# Installation, Dependencies, Packages, Runtimes
