@@ -2,6 +2,7 @@
 .idea/
 
 # Infrastruktur-Runtimes
-infrastructure/.terraform/
+infrastructure-hasemato/.terraform/
+infrastructure-stromify-stage/.terraform/
 
 # Installation, Dependencies, Packages, Runtimes
