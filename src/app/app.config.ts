@@ -4,7 +4,6 @@ import {
   InMemoryScrollingOptions,
   provideRouter,
   withInMemoryScrolling,
-  withRouterConfig
 } from '@angular/router';
 
 import { routes } from './app.routes';
