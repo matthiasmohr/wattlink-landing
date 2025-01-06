@@ -37,4 +37,4 @@ jobs:
 
       - name: Deploy
         if: success()
-        run: aws s3 sync ./dist/stromify-landing s3://stromify-stage-landing-origin/
+        run: aws s3 sync ./dist/stromify-landing/browser s3://stromify-stage-landing-origin/

@@ -2,7 +2,6 @@
 
 ## To DO
 ### Prio A
-- DropDown Boxen gehen nicht auf
 - Diverse Bilder und Icons sind verschwunden
 
 ### Prio B
