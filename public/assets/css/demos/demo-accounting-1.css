@@ -95,8 +95,8 @@ p {
 }
 
 .custom-mask-img-1 {
-		-webkit-mask-image: url(../../img/demos/accounting-1/generic/mask-image-1.png);
-		mask-image: url(../../img/demos/accounting-1/generic/mask-image-1.png);
+		-webkit-mask-image: url(../../images/img/demos/accounting-1/generic/mask-image-1.png);
+		mask-image: url(../../images/img/demos/accounting-1/generic/mask-image-1.png);
 		-webkit-mask-repeat: no-repeat;
 						mask-repeat: no-repeat;
 		-webkit-mask-size: 100%;
@@ -106,18 +106,18 @@ p {
 }
 
 .custom-mask-img-2 {
-		-webkit-mask-image: url(../../img/demos/accounting-1/generic/mask-image-2.png);
-		mask-image: url(../../img/demos/accounting-1/generic/mask-image-2.png);
+		-webkit-mask-image: url(../../images/img/demos/accounting-1/generic/mask-image-2.png);
+		mask-image: url(../../images/img/demos/accounting-1/generic/mask-image-2.png);
 }
 
 .custom-mask-img-3 {
-		-webkit-mask-image: url(../../img/demos/accounting-1/generic/mask-image-3.png);
-		mask-image: url(../../img/demos/accounting-1/generic/mask-image-3.png);
+		-webkit-mask-image: url(../../images/img/demos/accounting-1/generic/mask-image-3.png);
+		mask-image: url(../../images/img/demos/accounting-1/generic/mask-image-3.png);
 }
 
 .custom-mask-img-4 {
-		-webkit-mask-image: url(../../img/demos/accounting-1/generic/mask-image-4.png);
-		mask-image: url(../../img/demos/accounting-1/generic/mask-image-4.png);
+		-webkit-mask-image: url(../../images/img/demos/accounting-1/generic/mask-image-4.png);
+		mask-image: url(../../images/img/demos/accounting-1/generic/mask-image-4.png);
 }
 
 /* Cascading Wrapper */
