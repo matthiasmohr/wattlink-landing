@@ -11,6 +11,6 @@ export const environment = {
     footerShowServicesSection: false
   },
   links: {
-    portal: "portal.stromify.de"
+    portal: "https://portal.stromify.de"
   }
 };

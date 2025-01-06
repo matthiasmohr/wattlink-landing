@@ -8,9 +8,9 @@ export const environment = {
   appVersion: 'v0.1',
   featureToggle: {
     showPhoneChannel: false,
-    footerShowServicesSection: true
+    footerShowServicesSection: false
   },
   links: {
-    portal: "stage.portal.stromify.de"
+    portal: "https://stage.portal.stromify.de"
   }
 };
