@@ -29,7 +29,7 @@ export class ContactApiService {
     }
 
     postNewsletter(email: any): Observable<any> {
-      return this.http.post<any>(this.Url + '/newsletter', "{'email'" + email + "}", { headers }).pipe(
+      return this.http.post<any>(this.Url + '/newsletter', `{"email":"` + email + '"}"', { headers }).pipe(
         catchError(this.handleError)
       );
     }

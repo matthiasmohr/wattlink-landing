@@ -42,7 +42,7 @@
           </div>
 
           <!-- Formularfelder -->
-          <div class="row">
+          <div class="row" [ngClass]="{'d-none': isSuccess}">
             <div class="form-group col-lg-6">
               <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Your Name *</label>
               <input [(ngModel)]="contactBody.name" type="text" placeholder="Enter your name" name="name" #name="ngModel" required maxlength="100" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2">
@@ -58,7 +58,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" [ngClass]="{'d-none': isSuccess}">
             <div class="form-group col-lg-6">
               <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Phone Number</label>
               <input [(ngModel)]="contactBody.telefon" type="tel" placeholder="Enter your phone number" name="phone" #phone="ngModel" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2">
@@ -69,7 +69,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" [ngClass]="{'d-none': isSuccess}">
             <div class="form-group col">
               <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Additional Information *</label>
               <textarea [(ngModel)]="contactBody.message" maxlength="5000" placeholder="Enter Additional Information or Questions" rows="8" name="message" #message="ngModel" required class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2"></textarea>
@@ -78,7 +78,7 @@
           </div>
 
           <!-- Submit Button -->
-          <div class="row">
+          <div class="row" [ngClass]="{'d-none': isSuccess}">
             <div class="form-group col">
               <button type="submit" class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium" [disabled]="contactForm.invalid">
                 <span>Submit <i class="fa-solid fa-arrow-right ms-2 p-relative left-10"></i></span>

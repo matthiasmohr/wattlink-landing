@@ -36,7 +36,6 @@ export class KontaktComponent{
     if (contactForm.valid) {
       // Logik zum Senden der Anfrage
       this.contactApiService.postContact(this.contactBody).subscribe(res => {
-        console.log("request was sent sucesfully")
         this.isSuccess = true
       })
       console.log('Form submitted:', this.contactBody);

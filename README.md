@@ -2,13 +2,13 @@
 
 ## To DO
 ### Prio A
-- Registrierung in den Newsletter einbauen
 
 ### Prio B
 - Remove "text-color-danger" (used for ToDo Indication)
 
 ### Prio C
 - Header Sticky machen
+- Fehler catchen bei Newsletter-Registrierung, Kontakformular
 
 ## Folder Structure
   /src

@@ -101,7 +101,7 @@
           <strong>Vielen Dank!</strong> Wir bleiben in Kontakt
         </div>
         <div class="alert alert-danger d-none" id="newsletterError"></div>
-        <form class="mb-0" #newsletterForm="ngForm" (ngSubmit)="sendNewsletterRequest()">
+        <form class="mb-0" #newsletterForm="ngForm" (ngSubmit)="sendNewsletterRequest()" [ngClass]="{'d-none': isSuccess}">
           <div class="row">
             <div class="form-group col">
               <div class="position-relative">
