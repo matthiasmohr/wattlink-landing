@@ -13,5 +13,5 @@ export const environment = {
   links: {
     portal: "https://stage.portal.stromify.de"
   },
-  contactAPI: "https://stage.newsletter-forwarder.stromify.de"
+  contactAPI: "https://stage.newsletter-registerer.stromify.de"
 };
