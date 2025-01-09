@@ -95,24 +95,37 @@
         </ng-container>
       </div>
       <div class="col-lg-3 pt-4 pt-lg-0">
-        <h4 class="text-color-dark font-weight-bold mb-3">Newsletter</h4>
+        <h4 class="text-color-dark font-weight-bold mb-3">In Kontakt bleiben</h4>
         <p class="text-3-5 text-color-grey">Möchten Sie Neuigkeiten und Updates erhalten? Hier registrieren.</p>
-        <div class="alert alert-success d-none" id="newsletterSuccess">
-          <strong>Success!</strong> You've been added to our email list.
+        <div class="alert alert-success" [ngClass]="{'d-none': !isSuccess}">
+          <strong>Vielen Dank!</strong> Wir bleiben in Kontakt
         </div>
         <div class="alert alert-danger d-none" id="newsletterError"></div>
-        <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST" class="mb-0">
+        <form class="mb-0" #newsletterForm="ngForm" (ngSubmit)="sendNewsletterRequest()">
           <div class="row">
             <div class="form-group col">
               <div class="position-relative">
                 <i class="icons icon-envelope text-color-grey bg-light text-3-5 position-absolute right-15 top-50pct transform3dy-n50"></i>
-                <input type="email" value="" placeholder="Enter your e-mail" class="form-control form-control-icon text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2" name="newsletterEmail" id="newsletterEmail">
+                <input type="email"
+                       class="form-control form-control-icon text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2"
+                       name="newsletterEmail"
+                       id="newsletterEmail2"
+                       placeholder="E-Mail Adresse eingeben"
+                       required
+                       email
+                       #newsletterEmail="ngModel"
+                       [(ngModel)]="email">
+              </div>
+              <div class="alert alert-danger mt-2" *ngIf="newsletterEmail.invalid && newsletterEmail.touched">
+                Bitte geben Sie eine gültige E-Mail-Adresse ein.
               </div>
             </div>
           </div>
           <div class="row">
             <div class="form-group col">
-              <button type="submit" class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium px-3 py-2 text-2-5" data-clone-element="1">
+              <button type="submit"
+                      class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium px-3 py-2 text-2-5"
+                      [disabled]="newsletterForm.invalid">
                 <span>Registrieren <i class="fa-solid fa-arrow-right ms-2"></i></span>
               </button>
             </div>

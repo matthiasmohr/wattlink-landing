@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {environment} from "../../../environments/environment.stage";
+import {ContactApiService} from "../../shared/contact.service";
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,5 @@ import {environment} from "../../../environments/environment.stage";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
-    protected readonly environment = environment;
+  protected readonly environment = environment;
 }

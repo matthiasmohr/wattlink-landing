@@ -21,6 +21,124 @@
     </div>
   </div>
 
+  <!-- Free Quote -->
+  <div class="container pt-5">
+    <div class="row pt-4 pt-lg-5">
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <div class="animate__animated animate__fadeIn">
+          <span class="badge bg-gradient-light-primary-rgba-20 text-secondary rounded-pill text-uppercase font-weight-semibold text-2-5 px-3 py-2 px-4 mb-4"><span class="d-inline-flex py-1 px-2">Contact Form</span></span>
+        </div>
+        <h2 class="text-9 text-lg-12 font-weight-semibold line-height-1 mb-4">Get in Touch with Our Team</h2>
+        <form class="contact-form pt-3" #contactForm="ngForm" (ngSubmit)="sendContactRequest(contactForm)" novalidate>
+          <!-- Erfolgsnachricht -->
+          <div class="contact-form-success alert alert-success mt-4" [ngClass]="{'d-none': !isSuccess}">
+            <strong>Success!</strong> Your message has been sent to us.
+          </div>
+
+          <!-- Fehlermeldung -->
+          <div class="contact-form-error alert alert-danger d-none mt-4" [ngClass]="{'d-none': !isError}">
+            <strong>Error!</strong> There was an error sending your message.
+            <span class="mail-error-message text-1 d-block"></span>
+          </div>
+
+          <!-- Formularfelder -->
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Your Name *</label>
+              <input [(ngModel)]="contactBody.name" type="text" placeholder="Enter your name" name="name" #name="ngModel" required maxlength="100" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2">
+              <div *ngIf="name.invalid && name.touched" class="text-danger">Name is required.</div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Email Address</label>
+              <input [(ngModel)]="contactBody.email" type="email" placeholder="Enter your e-mail address" name="email" #email="ngModel" required email maxlength="100" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2">
+              <div *ngIf="email.invalid && email.touched" class="text-danger">
+                <div *ngIf="email.errors?.['required']">Email is required.</div>
+                <div *ngIf="email.errors?.['email']">Please enter a valid email address.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Phone Number</label>
+              <input [(ngModel)]="contactBody.telefon" type="tel" placeholder="Enter your phone number" name="phone" #phone="ngModel" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2">
+            </div>
+            <div class="form-group col-lg-6">
+              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Company Name</label>
+              <input [(ngModel)]="contactBody.firma" type="text" placeholder="Enter your company name" name="company" #company="ngModel" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col">
+              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Additional Information *</label>
+              <textarea [(ngModel)]="contactBody.message" maxlength="5000" placeholder="Enter Additional Information or Questions" rows="8" name="message" #message="ngModel" required class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2"></textarea>
+              <div *ngIf="message.invalid && message.touched" class="text-danger">Message is required.</div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="row">
+            <div class="form-group col">
+              <button type="submit" class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium" [disabled]="contactForm.invalid">
+                <span>Submit <i class="fa-solid fa-arrow-right ms-2 p-relative left-10"></i></span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="col-lg-5 ps-lg-5">
+
+        <div class="animate__animated animate__fadeIn pt-lg-5 mt-lg-2">
+          <div class="d-flex align-items-center pt-2 pb-4">
+            <p class="d-inline-block mb-0 font-weight-bold line-height-1"><mark class="text-dark mark mark-pos-2 mark-height-50 mark-color bg-color-before-primary-rgba-30 font-secondary text-15 mark-height-30 n-ls-5 p-0">30+</mark></p>
+            <span class="custom-font-tertiary text-6 text-dark n-ls-1 fst-italic ps-2">Years of Experience</span>
+          </div>
+        </div>
+
+        <div class="animate__animated animate__fadeIn">
+          <div class="py-2 d-flex align-items-center text-4-5 n-ls-1 text-dark">
+            <div>
+              <img src="assets/images/img/demos/accounting-1/icons/icon-4.svg" width="48" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary me-md-2 p-relative top-2'}" />
+            </div>
+            <div class="ps-1">
+              <p class="mb-0 text-3-5 p-relative bottom-2"><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i></p>
+              <strong class="custom-font-secondary pe-2">Join Us</strong><span class="d-none d-md-inline-block pe-2"> | </span>1000+ clients globally!
+            </div>
+          </div>
+        </div>
+
+        <div class="animate__animated animate__fadeIn pt-4">
+          <span class="badge bg-light text-dark border custom-font-secondary border-all-light box-shadow-8 n-ls-05 rounded-pill text-uppercase font-weight-semibold text-2 px-3 py-2 px-1 me-1"><span class="d-inline-flex py-1 px-2">Quick Reply</span></span>
+          <p class="mb-0 text-dark mt-2 text-3-5">Usually in 24 hours in working days.</p>
+        </div>
+
+        <!-- Explore Further -->
+        <div class="bg-secondary border-radius-2 p-relative overflow-hidden mt-5">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col px-0 text-center text-color-light">
+                <div class="d-flex flex-column">
+                  <div class="flex-grow-1">
+                    <span class="d-inline-block text-3 py-4 px-5 text-uppercase font-weight-medium custom-bg-gradient-1 w-100">Explore Further:</span>
+                  </div>
+                  <div class="me-3 ps-3 p-relative bottom-1 pt-3">
+                    <a href="demo-accounting-1-process.html" class="btn btn-arrow-effect-1 bg-transparent text-light border-0 text-lg-3-5 py-2">Learn About Our Process <i class="fas fa-arrow-right ms-2"></i></a>
+                  </div>
+                  <div class="py-3 p-relative bottom-1 border-start border-color-light-rgba-20">
+                    <a href="demo-accounting-1-projects.html" class="btn btn-arrow-effect-1 bg-transparent text-light border-0 text-lg-3-5 py-2">View Our Projects <i class="fas fa-arrow-right ms-2"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- Intro -->
   <div class="container pt-4 pt-lg-5 pb-4" id="intro">
     <div class="row pt-4">
@@ -117,123 +235,9 @@
       </div>
     </div>
 
-    <div class="row pt-4">
-      <div class="col pt-4">
-        <div class="animate__animated animate__fadeIn">
-          <p class="mb-0 text-dark d-flex justify-content-center">
-            <img src="assets/images/img/demos/accounting-1/icons/icon-5.svg" width="30" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-dark me-2'}" />
-            24/7 Availability - Round-the-clock support for all your accounting needs, anytime.
-          </p>
-        </div>
-      </div>
-    </div>
 
   </div>
 
-  <!-- Free Quote -->
-  <div class="container pt-5">
-    <div class="row pt-4 pt-lg-5">
-      <div class="col-lg-7 mb-5 mb-lg-0">
-        <div class="animate__animated animate__fadeIn">
-          <span class="badge bg-gradient-light-primary-rgba-20 text-secondary rounded-pill text-uppercase font-weight-semibold text-2-5 px-3 py-2 px-4 mb-4"><span class="d-inline-flex py-1 px-2">Contact Form</span></span>
-        </div>
-        <h2 class="text-9 text-lg-12 font-weight-semibold line-height-1 mb-4">Get in Touch with Our Team</h2>
 
-        <form class="contact-form pt-3" action="php/contact-form.php" method="POST">
-          <div class="contact-form-success alert alert-success d-none mt-4">
-            <strong>Success!</strong> Your message has been sent to us.
-          </div>
-
-          <div class="contact-form-error alert alert-danger d-none mt-4">
-            <strong>Error!</strong> There was an error sending your message.
-            <span class="mail-error-message text-1 d-block"></span>
-          </div>
-
-          <div class="row">
-            <div class="form-group col-lg-6">
-              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Your Name *</label>
-              <input type="text" value="" placeholder="Enter your name" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2" name="name" required>
-            </div>
-            <div class="form-group col-lg-6">
-              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Email Address</label>
-              <input type="email" value="" placeholder="Enter your e-mail address" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2" name="email" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-lg-6">
-              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Phone Number</label>
-              <input type="tel" value="" placeholder="Enter your phone number" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2" name="phone">
-            </div>
-            <div class="form-group col-lg-6">
-              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Company Name</label>
-              <input type="text" value="" placeholder="Enter your company name" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2" name="company">
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col">
-              <label class="form-label font-weight-bold text-uppercase text-dark mb-1 text-2">Additional Information</label>
-              <textarea maxlength="5000" placeholder="Enter Additional Information or Questions" rows="8" class="form-control text-3 h-auto border-width-2 border-radius-2 border-color-grey-200 py-2" name="message"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col">
-              <button type="submit" class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium" data-clone-element="1">
-                <span>Submit <i class="fa-solid fa-arrow-right ms-2 p-relative left-10"></i></span>
-              </button>
-            </div>
-          </div>
-        </form>
-
-      </div>
-      <div class="col-lg-5 ps-lg-5">
-
-        <div class="animate__animated animate__fadeIn pt-lg-5 mt-lg-2">
-          <div class="d-flex align-items-center pt-2 pb-4">
-            <p class="d-inline-block mb-0 font-weight-bold line-height-1"><mark class="text-dark mark mark-pos-2 mark-height-50 mark-color bg-color-before-primary-rgba-30 font-secondary text-15 mark-height-30 n-ls-5 p-0">30+</mark></p>
-            <span class="custom-font-tertiary text-6 text-dark n-ls-1 fst-italic ps-2">Years of Experience</span>
-          </div>
-        </div>
-
-        <div class="animate__animated animate__fadeIn">
-          <div class="py-2 d-flex align-items-center text-4-5 n-ls-1 text-dark">
-            <div>
-              <img src="assets/images/img/demos/accounting-1/icons/icon-4.svg" width="48" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary me-md-2 p-relative top-2'}" />
-            </div>
-            <div class="ps-1">
-              <p class="mb-0 text-3-5 p-relative bottom-2"><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i></p>
-              <strong class="custom-font-secondary pe-2">Join Us</strong><span class="d-none d-md-inline-block pe-2"> | </span>1000+ clients globally!
-            </div>
-          </div>
-        </div>
-
-        <div class="animate__animated animate__fadeIn pt-4">
-          <span class="badge bg-light text-dark border custom-font-secondary border-all-light box-shadow-8 n-ls-05 rounded-pill text-uppercase font-weight-semibold text-2 px-3 py-2 px-1 me-1"><span class="d-inline-flex py-1 px-2">Quick Reply</span></span>
-          <p class="mb-0 text-dark mt-2 text-3-5">Usually in 24 hours in working days.</p>
-        </div>
-
-        <!-- Explore Further -->
-        <div class="bg-secondary border-radius-2 p-relative overflow-hidden mt-5">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col px-0 text-center text-color-light">
-                <div class="d-flex flex-column">
-                  <div class="flex-grow-1">
-                    <span class="d-inline-block text-3 py-4 px-5 text-uppercase font-weight-medium custom-bg-gradient-1 w-100">Explore Further:</span>
-                  </div>
-                  <div class="me-3 ps-3 p-relative bottom-1 pt-3">
-                    <a href="demo-accounting-1-process.html" class="btn btn-arrow-effect-1 bg-transparent text-light border-0 text-lg-3-5 py-2">Learn About Our Process <i class="fas fa-arrow-right ms-2"></i></a>
-                  </div>
-                  <div class="py-3 p-relative bottom-1 border-start border-color-light-rgba-20">
-                    <a href="demo-accounting-1-projects.html" class="btn btn-arrow-effect-1 bg-transparent text-light border-0 text-lg-3-5 py-2">View Our Projects <i class="fas fa-arrow-right ms-2"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
 
 </div>

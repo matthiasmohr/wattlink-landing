@@ -2,7 +2,7 @@
 
 ## To DO
 ### Prio A
-- Diverse Bilder und Icons sind verschwunden
+- Registrierung in den Newsletter einbauen
 
 ### Prio B
 - Remove "text-color-danger" (used for ToDo Indication)
