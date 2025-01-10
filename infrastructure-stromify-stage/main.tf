@@ -1,3 +1,6 @@
+# HINWEIS ZUR EINRICHTUNG
+# Im S3 Bucket -> Properties -> ganz unten "Static Website Hosting" -> Enable -> Index und Error Documents auf "index.html"
+# In CloudFront -> Add Custom Error Document -> von 404 auf index.html 200
 terraform {
   required_providers {
     aws = {
@@ -43,6 +46,11 @@ module "cdn" {
   aliases           = ["stage.stromify.de"]
   dns_alias_enabled = true
   parent_zone_name  = "stromify.de"
+
+  //website_enabled = true
+  //s3_website_password_enabled = true
+  //s3_bucket       = aws_s3_bucket.static_website.bucket
+  //s3_origin_path  = "/"  # Wurzelverzeichnis des Buckets
 
   acm_certificate_arn = module.acm_request_certificate.arn
 
