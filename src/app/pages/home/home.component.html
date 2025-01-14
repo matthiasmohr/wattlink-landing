@@ -363,6 +363,8 @@
         </div>
       </div>
     </div>
+  </div>
+    <!-- Zwischenbalken -->
     <div class="bg-secondary rounded-bottom p-relative overflow-hidden">
       <div class="container-fluid">
         <div class="row">
@@ -372,10 +374,10 @@
                 <span class="d-inline-block text-3 py-4 px-5 text-uppercase font-weight-medium custom-bg-gradient-1 w-100 rounded-pill">Weitere Informationen:</span>
               </div>
               <div class="me-3 ps-3 p-relative bottom-1 pt-3 pt-lg-0">
-                <a href="process.html" class="btn btn-arrow-effect-1 bg-transparent text-light border-0 text-lg-3-5 py-2 py-lg-0">So funktioniert der Prozess <i class="fas fa-arrow-right ms-2"></i></a>
+                <a routerLink="/prozess" class="btn btn-arrow-effect-1 bg-transparent text-light border-0 text-lg-3-5 py-2 py-lg-0">So funktioniert der Prozess <i class="fas fa-arrow-right ms-2"></i></a>
               </div>
               <div class="py-3 py-lg-0 p-relative bottom-1 border-start border-color-light-rgba-20">
-                <a href="contact.html" class="btn btn-arrow-effect-1 bg-transparent text-light border-0 text-lg-3-5 py-2 py-lg-0">Kontakt <i class="fas fa-arrow-right ms-2"></i></a>
+                <a routerLink="/kontakt" class="btn btn-arrow-effect-1 bg-transparent text-light border-0 text-lg-3-5 py-2 py-lg-0">Kontakt <i class="fas fa-arrow-right ms-2"></i></a>
               </div>
             </div>
           </div>
@@ -425,20 +427,29 @@
               <h2 class="text-9 text-lg-12 font-weight-semibold line-height-1 mb-4">Das sagen unsere Kunden</h2>
             </div>
             <div class="animate__animated animate__fadeIn">
-              <p>Unser Engagement für die Bereitstellung außergewöhnlicher Dienste spiegelt sich in dem Feedback wider, das wir von unseren geschätzten Kunden erhalten.</p>
+              <p>Unser Engagement spiegelt sich in dem Feedback wider, das wir von unseren geschätzten Kunden erhalten.</p>
             </div>
 
             <div class="animate__animated animate__fadeIn">
               <div class="py-2 d-flex text-4-5 n-ls-1 text-dark">
-                <img src="assets/images/img/demos/accounting-1/icons/icon-4.svg" width="28" alt="" /> <strong class="custom-font-secondary pe-2">Teste uns</strong> | 100+ Nutzer in Deutschland!
+                <img src="assets/images/img/demos/accounting-1/icons/icon-4.svg" width="28" alt="" /> <strong class="custom-font-secondary pe-2">Teste uns</strong>
               </div>
             </div>
 
             <div class="animate__animated animate__fadeIn">
-              <div class="d-flex pt-4 align-items-center">
-                <a href="contact.html" class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium" data-clone-element="1">
-                  <span>Werde Nutzer <i class="fa-solid fa-arrow-right ms-2 p-relative left-10"></i></span>
-                </a>
+              <div class="row">
+                <div class="d-flex pt-4 align-items-center">
+                  <a href="{{environment.links.portal}}" class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium" data-clone-element="1">
+                    <span>Lieferanfrage stellen <i class="fa-solid fa-arrow-right ms-2 p-relative left-10"></i></span>
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="d-flex pt-4 align-items-center">
+                  <a routerLink="/kontakt" class="btn btn-rounded btn-light box-shadow-7 font-weight-medium" data-clone-element="1">
+                    <span>Bestandskunden kontaktieren <i class="fa-solid fa-message ms-2 p-relative left-10"></i></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -453,10 +464,10 @@
                   <div class="testimonial-author-thumbnail">
                     <img src="assets/images/img/clients/client-1.jpg" loading="lazy" class="img-fluid rounded-circle" alt="">
                   </div>
-                  <p><strong class="font-weight-bold">Simon Z.</strong><span>Founder - Stromify</span></p>
+                  <p><strong class="font-weight-bold">Simon L.</strong><span>Immobilienverwalter</span></p>
                 </div>
                 <div class="px-4 mx-2 pt-2 pb-3">
-                  <p>Dank der Plattform konnten wir die Angebote verschiedener Stromanbieter unkompliziert vergleichen und haben so einen deutlich günstigeren Vertrag für unser Unternehmen abgeschlossen. Der Prozess war schnell und transparent.</p>
+                  <p>Endlich ein Unternehmen, dass mir volle Transparenz gibt ohne das ich irgend etwas tun muss. Stromify gab mir Gewissheit, dass ich den besten Deal bekommen habe.</p>
                   <p class="mb-0"><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i></p>
                 </div>
               </div>
@@ -471,10 +482,10 @@
                   <div class="testimonial-author-thumbnail">
                     <img src="assets/images/img/clients/client-2.jpg" loading="lazy" class="img-fluid rounded-circle" alt="">
                   </div>
-                  <p><strong class="font-weight-bold">Matthias M.</strong><span>Small Business Owner</span></p>
+                  <p><strong class="font-weight-bold">Caro F.</strong><span>Medizinisches Labor</span></p>
                 </div>
                 <div class="px-4 mx-2 pt-2 pb-3">
-                  <p>Unsere jährlichen Energiekosten haben sich durch den Wechsel des Anbieters um 15 % reduziert. Die Plattform war eine große Hilfe bei der Auswahl des passenden Energieversorgers.</p>
+                  <p>Stromify hat mir glaubhaft vermitteln können, dass sie Ahnung haben und das beste Angebot für uns finden. Wir haben über 50% zum bisherigen Vertrag eingespart, dank Stromify.</p>
                   <p class="mb-0"><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i></p>
                 </div>
               </div>
@@ -489,10 +500,10 @@
                   <div class="testimonial-author-thumbnail">
                     <img src="assets/images/img/clients/client-3.jpg" loading="lazy" class="img-fluid rounded-circle" alt="">
                   </div>
-                  <p><strong class="font-weight-bold">Caro Z.</strong><span>Entrepreneur</span></p>
+                  <p><strong class="font-weight-bold">Udo Z.</strong><span>Kühlhausbetreiber</span></p>
                 </div>
                 <div class="px-4 mx-2 pt-2 pb-3">
-                  <p>Besonders gut hat uns gefallen, wie einfach und intuitiv die Plattform zu bedienen ist. Wir konnten innerhalb kurzer Zeit eine fundierte Entscheidung treffen.</p>
+                  <p>Wir müssen effizient wirtschaften, wollen aber gleichzeitig einen Energieversorger, der zu unseren Werten passt. Stromify hat uns das genau geliefert und gleichzeitig eine Kostenersparnis in relevanter Höhe erzeugt</p>
                   <p class="mb-0"><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i><i class="fas fa-star custom-text-color-2 text-2"></i></p>
                 </div>
               </div>
@@ -502,112 +513,4 @@
       </div>
     </div>
   </div>
-
-  <!-- News -->
-  <div class="text-center overflow-hidden w-100">
-    <div class="animate__animated animate__fadeIn">
-      <h2 class="text-resp-150 ws-nowrap font-weight-semi-bold text-overflow-center text-color-grey-100 n-ls-5 mb-5">News</h2>
-    </div>
-  </div>
-  <div class="bg-grey-100 px-3 px-xl-0 border-radius-2 p-relative overflow-hidden custom-pos-3">
-    <div class="container py-5">
-      <div class="row pt-4">
-        <div class="col text-center">
-          <div class="animate__animated animate__fadeIn">
-            <h2 class="text-9 text-lg-12 font-weight-semibold line-height-1 mb-4">Latest News</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row pb-5">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <article class="post">
-            <div class="card rounded-3 border-0 bg-transparent box-shadow-10 box-shadow-1 box-shadow-1-hover anim-hover-translate-top-10px transition-3ms">
-              <div class="p-relative rounded-3 overflow-hidden">
-                <div class="post-date p-absolute top-20 left-20">
-                  <span class="day py-1 text-4 font-weight-bold text-secondary">15</span>
-                  <span class="month bg-secondary">Jan</span>
-                </div>
-                <div class="p-absolute right-10 top-10">
-                  <i class="fa-regular fa-message text-color-light text-4 p-absolute right-10 top-20"></i>
-                  <span class="badge badge-comments-count bg-secondary text-color-light rounded-pill p-0 p-relative z-index-1">5</span>
-                </div>
-                <a href="demo-accounting-1-news-post.html" class="text-decoration-none">
-                  <img class="card-img-top" src="assets/images/img/demos/accounting-1/blog/blog-thumb-1.jpg" loading="lazy" alt="Card Image">
-                </a>
-                <div class="card-body bg-light p-4">
-                  <span class="badge badge-dark badge-sm rounded-pill text-uppercase me-1">business</span>
-                  <h4 class="my-2"><a href="demo-accounting-1-news-post.html" class="text-decoration-none text-dark text-color-hover-primary">Common Tax Mistakes</a></h4>
-                  <p class="card-text text-3-5 mb-1">Tax season can be a stressful time for small business owners, especially when navigating the complex web of tax...</p>
-                  <a href="demo-accounting-1-news-post.html" class="read-more text-color-secondary font-weight-semibold text-2">Read More <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
-                  <div class="d-flex align-items-center mt-3 pt-1">
-                    <img src="assets/images/img/avatars/avatar.jpg" loading="lazy" class="img-fluid rounded-circle me-2" width="25" alt="">
-                    <strong class="text-color-dark text-2">by John Doe</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <article class="post">
-            <div class="card rounded-3 border-0 bg-transparent box-shadow-10 box-shadow-1 box-shadow-1-hover anim-hover-translate-top-10px transition-3ms">
-              <div class="p-relative rounded-3 overflow-hidden">
-                <div class="post-date p-absolute top-20 left-20">
-                  <span class="day py-1 text-4 font-weight-bold text-secondary">15</span>
-                  <span class="month bg-secondary">Jan</span>
-                </div>
-                <div class="p-absolute right-10 top-10">
-                  <i class="fa-regular fa-message text-color-light text-4 p-absolute right-10 top-20"></i>
-                  <span class="badge badge-comments-count bg-secondary text-color-light rounded-pill p-0 p-relative z-index-1">5</span>
-                </div>
-                <a href="demo-accounting-1-news-post.html" class="text-decoration-none">
-                  <img class="card-img-top" src="assets/images/img/demos/accounting-1/blog/blog-thumb-2.jpg" loading="lazy" alt="Card Image">
-                </a>
-                <div class="card-body bg-light p-4">
-                  <span class="badge badge-dark badge-sm rounded-pill text-uppercase me-1">business</span>
-                  <h4 class="my-2"><a href="demo-accounting-1-news-post.html" class="text-decoration-none text-dark text-color-hover-primary">Cash and Accrual Accounting</a></h4>
-                  <p class="card-text text-3-5 mb-1">Many business owners struggle with choosing the right accounting method for their business. This blog post would...</p>
-                  <a href="demo-accounting-1-news-post.html" class="read-more text-color-secondary font-weight-semibold text-2">Read More <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
-                  <div class="d-flex align-items-center mt-3 pt-1">
-                    <img src="assets/images/img/avatars/avatar.jpg" loading="lazy" class="img-fluid rounded-circle me-2" width="25" alt="">
-                    <strong class="text-color-dark text-2">by John Doe</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <article class="post">
-            <div class="card rounded-3 border-0 bg-transparent box-shadow-10 box-shadow-1 box-shadow-1-hover anim-hover-translate-top-10px transition-3ms">
-              <div class="p-relative rounded-3 overflow-hidden">
-                <div class="post-date p-absolute top-20 left-20">
-                  <span class="day py-1 text-4 font-weight-bold text-secondary">15</span>
-                  <span class="month bg-secondary">Jan</span>
-                </div>
-                <div class="p-absolute right-10 top-10">
-                  <i class="fa-regular fa-message text-color-light text-4 p-absolute right-10 top-20"></i>
-                  <span class="badge badge-comments-count bg-secondary text-color-light rounded-pill p-0 p-relative z-index-1">5</span>
-                </div>
-                <a href="demo-accounting-1-news-post.html" class="text-decoration-none">
-                  <img class="card-img-top" src="assets/images/img/demos/accounting-1/blog/blog-thumb-3.jpg" loading="lazy" alt="Card Image">
-                </a>
-                <div class="card-body bg-light p-4">
-                  <span class="badge badge-dark badge-sm rounded-pill text-uppercase me-1">business</span>
-                  <h4 class="my-2"><a href="demo-accounting-1-news-post.html" class="text-decoration-none text-dark text-color-hover-primary">Prepare for a Financial Audit</a></h4>
-                  <p class="card-text text-3-5 mb-1">Preparing for a financial audit can be daunting for businesses, but it doesn't have to be...</p>
-                  <a href="demo-accounting-1-news-post.html" class="read-more text-color-secondary font-weight-semibold text-2">Read More <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
-                  <div class="d-flex align-items-center mt-3 pt-1">
-                    <img src="assets/images/img/avatars/avatar.jpg" loading="lazy" class="img-fluid rounded-circle me-2" width="25" alt="">
-                    <strong class="text-color-dark text-2">by John Doe</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
