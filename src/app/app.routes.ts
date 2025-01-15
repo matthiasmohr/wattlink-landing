@@ -6,9 +6,11 @@ import {KontaktComponent} from "./pages/footer/kontakt/kontakt.component";
 import {ImpressumComponent} from "./pages/footer/impressum/impressum.component";
 import {DatenschutzComponent} from "./pages/footer/datenschutz/datenschutz.component";
 import {AgbComponent} from "./pages/footer/agb/agb.component";
+import {ServicesComponent} from "./pages/services/services.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent},
+  { path: 'services', component: ServicesComponent},
   { path: 'prozess', component: ProzessComponent},
   { path: 'ueberuns', component: UeberUnsComponent},
   // FOOTER
