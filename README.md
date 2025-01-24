@@ -4,7 +4,6 @@
 ### Prio A
 
 ### Prio B
-- Remove "text-color-danger" (used for ToDo Indication)
 
 ### Prio C
 - Header Sticky machen

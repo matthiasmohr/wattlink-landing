@@ -15,7 +15,8 @@
           <div class="col-auto col-lg-2 col-xxl-3 me-auto me-lg-0">
             <div class="header-logo" data-clone-element-to="#offCanvasLogo">
               <a routerLink="/home">
-                <img alt="Stromify" height="60" src="assets/images/logos/logo_dark.png">
+                <img alt="Stromify" class="d-inline d-sm-none" height="40" src="assets/images/logos/logo_dark.png">
+                <img alt="Stromify" class="d-none d-sm-inline" height="60" src="assets/images/logos/logo_dark.png">
               </a>
             </div>
           </div>
@@ -35,11 +36,11 @@
           </div>
           <div class="col-auto col-lg-2 col-xxl-3">
             <div class="d-flex justify-content-end align-items-center">
-              <div class="d-none d-sm-flex d-lg-none d-xxl-flex">
+              <div class="d-none d-md-flex">
                 <img src="assets/images/img/icons/phone-2.svg" width="24" height="24" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary pe-1'}" />
                 <a routerLink="/kontakt" class="text-decoration-none font-secondary text-4 font-weight-semibold text-color-dark text-color-hover-primary transition-2ms negative-ls-05 ws-nowrap">Kontakt</a>
               </div>
-              <a href="{{environment.links.portal}}" class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium px-4 py-3 text-2-5 ms-3 d-none d-md-flex" data-clone-element="1">
+              <a href="{{environment.links.portal}}" class="btn btn-rounded btn-dark box-shadow-7 font-weight-medium px-4 py-3 text-2-5 ms-3 d-none d-sm-flex text-nowrap" data-clone-element="1">
                 <span>Anmelden <i class="fa-solid fa-arrow-right ms-2"></i></span>
               </a>
               <button class="btn header-btn-collapse-nav rounded-pill" data-bs-toggle="offcanvas" href="#offcanvasMain" role="button" aria-controls="offcanvasMain">
