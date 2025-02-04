@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {LayoutsModule} from "./layouts/layouts.module";
 import { OffcanvasMenuComponent } from "./layouts/offcanvas-menu/offcanvas-menu.component";
 import { GoogleAnalyticsService } from "./shared/googleanalytics.service";
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,9 @@ export class AppComponent implements OnInit {
   constructor(private gaService: GoogleAnalyticsService) {}
 
   ngOnInit(): void {
-    const containerId = 'GTM-TR6KH6N5';
-    this.gaService.initialize(containerId);
+    const containerId = environment.marketing.googleAnalytics.containerId;
+    if (containerId != null) {
+      this.gaService.initialize(containerId);
+    }
   }
 }

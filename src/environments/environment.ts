@@ -13,5 +13,10 @@ export const environment = {
   links: {
     portal: "https://stage.portal.stromify.de"
   },
-  contactAPI: "http://localhost:8080"
+  contactAPI: "http://localhost:8080",
+  marketing: {
+    googleAnalytics: {
+      containerId: null
+    }
+  }
 };
