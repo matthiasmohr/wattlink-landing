@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   constructor(private gaService: GoogleAnalyticsService) {}
 
   ngOnInit(): void {
-    const trackingId = 'G-7MN7XNRN4B'; // Dynamisch laden, z.B. aus einer Konfigurationsdatei oder API
-    this.gaService.initialize(trackingId);
+    const containerId = 'GTM-TR6KH6N5';
+    this.gaService.initialize(containerId);
   }
 }
