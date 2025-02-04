@@ -23,7 +23,10 @@ export class GoogleAnalyticsService {
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) { window.dataLayer.push(args); }
       gtag('js', new Date());
-      gtag('config', trackingId);
+      gtag('config', trackingId, { 'debug_mode': true });
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
     };
   }
 }
