@@ -13,5 +13,10 @@ export const environment = {
   links: {
     portal: "https://portal.stromify.de"
   },
-  contactAPI: "https://stage.newsletter-registerer.stromify.de"
+  contactAPI: "https://stage.newsletter-registerer.stromify.de",
+  marketing: {
+    googleAnalytics: {
+      containerId: 'GTM-TR6KH6N5'
+    }
+  }
 };
