@@ -1,22 +1,13 @@
 
-  <header id="header"
-          data-plugin-options="{
-          'stickyScrollUp': true,
-          'stickyEnabled': true,
-          'stickyEffect': 'shrink',
-          'stickyEnableOnBoxed': true,
-          'stickyEnableOnMobile': false,
-          'stickyChangeLogo': false,
-          'stickyStartAt': 100,
-          'stickyHeaderContainerHeight': 100}">
+  <header [class.shrunk]="isShrunk" id="header">
     <div class="header-body border-top-0 h-auto box-shadow-none">
       <div class="container-fluid px-3 px-lg-5 p-static">
-        <div class="row align-items-center py-3">
+        <div class="row align-items-center">
           <div class="col-auto col-lg-2 col-xxl-3 me-auto me-lg-0">
             <div class="header-logo" data-clone-element-to="#offCanvasLogo">
               <a routerLink="/home">
-                <img alt="Stromify" class="d-inline d-sm-none" height="40" src="assets/images/logos/logo_dark.png">
-                <img alt="Stromify" class="d-none d-sm-inline" height="60" src="assets/images/logos/logo_dark.png">
+                <img alt="Stromify" class="logo-small d-inline d-sm-none" height="40" src="assets/images/logos/logo_dark.png">
+                <img alt="Stromify" class="logo d-none d-sm-inline" height="60" src="assets/images/logos/logo_dark.png">
               </a>
             </div>
           </div>

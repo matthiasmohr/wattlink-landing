@@ -7,7 +7,6 @@
 
 ### Prio C
 - Header Sticky machen
-- Fehler catchen bei Newsletter-Registrierung, Kontakformular
 
 ## Folder Structure
   /src
