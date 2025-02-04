@@ -21,6 +21,8 @@
     "@angular/platform-server": "^18.2.0",
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.3",
+    "@sentry/angular": "^8.54.0",
+    "@sentry/tracing": "^7.120.3",
     "angular-gtag": "^1.0.4",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",

@@ -1,5 +1,6 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import {APP_INITIALIZER, ApplicationConfig, ErrorHandler, provideZoneChangeDetection} from '@angular/core';
 import {
+  Router,
   InMemoryScrollingFeature,
   InMemoryScrollingOptions,
   provideRouter,
@@ -9,6 +10,7 @@ import {
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import {provideHttpClient} from "@angular/common/http";
+import * as Sentry from "@sentry/angular";
 
 const scrollConfig: InMemoryScrollingOptions = {
   scrollPositionRestoration: 'top',
@@ -26,5 +28,23 @@ export const appConfig: ApplicationConfig = {
       routes,
       inMemoryScrollingFeature
     ),
-    provideClientHydration()]
+    provideClientHydration(),
+    // SENTRY
+    {
+      provide: ErrorHandler,
+      useValue: Sentry.createErrorHandler({
+        showDialog: true,
+      }),
+    },
+    {
+      provide: Sentry.TraceService,
+      deps: [Router],
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => () => {},
+      deps: [Sentry.TraceService],
+      multi: true,
+    },
+  ]
 };
